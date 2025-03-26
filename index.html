@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiel Download</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        input { padding: 10px; margin: 10px; }
+        button { padding: 10px 20px; cursor: pointer; }
+        #download { display: none; color: green; }
+    </style>
+</head>
+<body>
+    <h2>Gib deinen Code ein, um den Download freizuschalten:</h2>
+    <input type="text" id="codeInput" placeholder="Code eingeben">
+    <button onclick="checkCode()">Freischalten</button>
+    <p id="error" style="color: red;"></p>
+    <p id="download"><b>✔ Code gültig!</b> Hier ist dein <a id="downloadLink" href="#" target="_blank">Download-Link</a>.</p>
+    
+    <script>
+        function checkCode() {
+            const validCodes = ["MeinSpiel123", "GeheimerCode456", "TestCode789"];
+            const userCode = document.getElementById("codeInput").value;
+            const downloadLink = "https://drive.google.com/uc?export=download&id=DEINE_DATEI_ID";
+            
+            if (validCodes.includes(userCode)) {
+                document.getElementById("downloadLink").href = downloadLink;
+                document.getElementById("download").style.display = "block";
+                document.getElementById("error").textContent = "";
+            } else {
+                document.getElementById("error").textContent = "✖ Falscher Code. Bitte versuche es erneut.";
+                document.getElementById("download").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
