@@ -3,34 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spiel Download</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        input { padding: 10px; margin: 10px; }
-        button { padding: 10px 20px; cursor: pointer; }
-        #download { display: none; color: green; }
-    </style>
+    <title>HauntingLockdown</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Gib deinen Code ein, um den Download freizuschalten:</h2>
-    <input type="text" id="codeInput" placeholder="Code eingeben">
-    <button onclick="checkCode()">Freischalten</button>
-    <p id="error" style="color: red;"></p>
-    <p id="download"><b>✔ Code gültig!</b> Hier ist dein <a id="downloadLink" href="#" target="_blank">Download-Link</a>.</p>
+    <header>
+        <h1>HauntingLockdown</h1>
+        <p>Ein Multiplayer-Horrorspiel für bis zu 5 Spieler. Einer ist der Geist, die anderen müssen ihn entlarven.</p>
+    </header>
+    
+    <section id="news">
+        <h2>Neuigkeiten & Patchnotes</h2>
+        <div id="patchnotes">
+            <p>Lade Patchnotes...</p>
+        </div>
+    </section>
+    
+    <section id="download">
+        <h2>Spiel herunterladen</h2>
+        <p>Aktuelle Version: <span id="version">1.0</span></p>
+        <label for="password">Passwort:</label>
+        <input type="password" id="password">
+        <button onclick="downloadGame()">Download</button>
+    </section>
     
     <script>
-        function checkCode() {
-            const validCodes = ["MeinSpiel123", "GeheimerCode456", "TestCode789"];
-            const userCode = document.getElementById("codeInput").value;
-            const downloadLink = "https://drive.google.com/uc?export=download&id=DEINE_DATEI_ID";
+        function downloadGame() {
+            const password = document.getElementById('password').value;
+            const correctPassword = "DEIN_PASSWORT";
             
-            if (validCodes.includes(userCode)) {
-                document.getElementById("downloadLink").href = downloadLink;
-                document.getElementById("download").style.display = "block";
-                document.getElementById("error").textContent = "";
+            if (password === correctPassword) {
+                window.location.href = "https://drive.google.com/YOUR_GAME_FOLDER";
             } else {
-                document.getElementById("error").textContent = "✖ Falscher Code. Bitte versuche es erneut.";
-                document.getElementById("download").style.display = "none";
+                alert("Falsches Passwort!");
             }
         }
     </script>
