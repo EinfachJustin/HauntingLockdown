@@ -3,41 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HauntingLockdown</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Haunting Lockdown - Das Geisterspiel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>HauntingLockdown</h1>
-        <p>Ein Multiplayer-Horrorspiel für bis zu 5 Spieler. Einer ist der Geist, die anderen müssen ihn entlarven.</p>
-    </header>
-    
-    <section id="news">
-        <h2>Neuigkeiten & Patchnotes</h2>
-        <div id="patchnotes">
-            <p>Lade Patchnotes...</p>
-        </div>
-    </section>
-    
-    <section id="download">
-        <h2>Spiel herunterladen</h2>
-        <p>Aktuelle Version: <span id="version">1.0</span></p>
-        <label for="password">Passwort:</label>
-        <input type="password" id="password">
-        <button onclick="downloadGame()">Download</button>
-    </section>
-    
-    <script>
-        function downloadGame() {
-            const password = document.getElementById('password').value;
-            const correctPassword = "DEIN_PASSWORT";
-            
-            if (password === correctPassword) {
-                window.location.href = "https://drive.google.com/YOUR_GAME_FOLDER";
-            } else {
-                alert("Falsches Passwort!");
-            }
-        }
-    </script>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <h1>Haunting Lockdown</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">Über das Spiel</a></li>
+                    <li><a href="#news">News & Updates</a></li>
+                    <li><a href="#download">Download</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <h1>Haunting Lockdown</h1>
+                    <p class="version">Aktuelle Version: <span id="current-version">1.0.0</span></p>
+                    <p class="tagline">Wer ist der Geist unter euch?</p>
+                    <a href="#download" class="btn">Jetzt Spielen</a>
+                </div>
+            </section>
+
+            <section id="about" class="about">
+                <div class="section-header">
+                    <h2>Über das Spiel</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Willkommen bei Haunting Lockdown!</h3>
+                        <p>Haunting Lockdown ist ein spannendes Multiplayer-Spiel für dich und deine Freunde. Hier sind die wichtigsten Features:</p>
+                        <ul>
+                            <li><i class="fas fa-users"></i> Für bis zu 5 Spieler</li>
+                            <li><i class="fas fa-ghost"></i> Ein Spieler ist der Geist</li>
+                            <li><i class="fas fa-search"></i> Die anderen müssen den Geist identifizieren</li>
+                            <li><i class="fas fa-gamepad"></i> Spannende Gameplay-Mechaniken</li>
+                            <li><i class="fas fa-laugh-beam"></i> Perfekt für Spieleabende mit Freunden</li>
+                        </ul>
+                        <p>Tauche ein in die mysteriöse Welt von Haunting Lockdown und finde heraus, wer unter euch der Geist ist, bevor es zu spät ist!</p>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-ghost"></i>
+                            <p>Spielgrafik</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="news" class="news">
+                <div class="section-header">
+                    <h2>News & Updates</h2>
+                </div>
+                <div class="news-container">
+                    <div class="news-item">
+                        <div class="news-date">15. Mai 2023</div>
+                        <h3>Version 1.0.0 veröffentlicht!</h3>
+                        <p>Die erste offizielle Version von Haunting Lockdown ist jetzt verfügbar! Lade es herunter und spiele mit deinen Freunden.</p>
+                        <div class="patch-notes">
+                            <h4>Patch Notes:</h4>
+                            <ul>
+                                <li>Initiale Veröffentlichung des Spiels</li>
+                                <li>5 verschiedene Geister-Typen implementiert</li>
+                                <li>10 einzigartige Karten zum Spielen</li>
+                                <li>Grundlegende Spielmechaniken implementiert</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Weitere News-Items können hier hinzugefügt werden -->
+                </div>
+            </section>
+
+            <section id="download" class="download">
+                <div class="section-header">
+                    <h2>Download</h2>
+                </div>
+                <div class="download-container">
+                    <div class="download-info">
+                        <h3>Haunting Lockdown herunterladen</h3>
+                        <p>Aktuelle Version: <span id="download-version">1.0.0</span></p>
+                        <p>Um das Spiel herunterzuladen, benötigst du das Passwort. Gib es unten ein:</p>
+                        <div class="password-container">
+                            <input type="password" id="download-password" placeholder="Passwort eingeben">
+                            <button id="check-password" class="btn">Überprüfen</button>
+                        </div>
+                        <div id="download-link" style="display: none;">
+                            <a href="#" class="btn download-btn" id="download-button">
+                                <i class="fas fa-download"></i> Jetzt Herunterladen
+                            </a>
+                        </div>
+                        <div id="password-error" class="error-message" style="display: none;">
+                            Falsches Passwort. Bitte versuche es erneut.
+                        </div>
+                    </div>
+                    <div class="system-requirements">
+                        <h4>Systemanforderungen:</h4>
+                        <ul>
+                            <li><strong>Betriebssystem:</strong> Windows 10/11</li>
+                            <li><strong>Prozessor:</strong> Intel Core i3 oder besser</li>
+                            <li><strong>RAM:</strong> 4 GB</li>
+                            <li><strong>Grafik:</strong> Integrierte Grafik ausreichend</li>
+                            <li><strong>Speicherplatz:</strong> 500 MB</li>
+                            <li><strong>Internetverbindung:</strong> Für Multiplayer erforderlich</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Haunting Lockdown</h3>
+                    <p>Ein Spiel von Freunden für Freunde</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Über das Spiel</a></li>
+                        <li><a href="#news">News & Updates</a></li>
+                        <li><a href="#download">Download</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontakt</h4>
+                    <p>Bei Fragen oder Feedback:</p>
+                    <a href="mailto:kontakt@hauntinglockdown.de">kontakt@hauntinglockdown.de</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Haunting Lockdown. Alle Rechte vorbehalten.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
