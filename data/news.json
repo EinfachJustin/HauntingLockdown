@@ -1,0 +1,42 @@
+{
+    "news": [
+        {
+            "date": "15. März 2024",
+            "title": "Version 1.0.0 veröffentlicht!",
+            "description": "Die erste offizielle Version von Haunting Lockdown ist jetzt verfügbar! Lade es herunter und spiele mit deinen Freunden.",
+            "image": "https://picsum.photos/800/400?random=1",
+            "hasImage": true,
+            "patchNotes": {
+                "title": "Patch Notes:",
+                "items": [
+                    "Initiale Veröffentlichung des Spiels",
+                    "5 verschiedene Geister-Typen implementiert",
+                    "10 einzigartige Karten zum Spielen",
+                    "Grundlegende Spielmechaniken implementiert"
+                ]
+            }
+        },
+        {
+            "date": "1. März 2024",
+            "title": "Beta-Testing erfolgreich abgeschlossen",
+            "description": "Vielen Dank an alle Beta-Tester! Euer Feedback hat uns geholfen, das Spiel noch besser zu machen.",
+            "image": "https://picsum.photos/800/400?random=2",
+            "hasImage": true,
+            "patchNotes": {
+                "title": "Verbesserungen:",
+                "items": [
+                    "UI/UX Verbesserungen basierend auf Feedback",
+                    "Performance-Optimierungen",
+                    "Bugfixes"
+                ]
+            }
+        },
+        {
+            "date": "15. Februar 2024",
+            "title": "Neue Geister-Typen angekündigt",
+            "description": "Wir haben neue, spannende Geister-Typen für euch entwickelt. Bald erfahrt ihr mehr!",
+            "image": "https://picsum.photos/800/400?random=3",
+            "hasImage": true
+        }
+    ]
+} 

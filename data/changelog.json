@@ -1,0 +1,69 @@
+{
+    "changelog": [
+        {
+            "version": "1.0.0",
+            "date": "15. März 2024",
+            "changes": [
+                {
+                    "type": "feature",
+                    "title": "Neue Features",
+                    "items": [
+                        "Initiale Veröffentlichung des Spiels",
+                        "5 verschiedene Geister-Typen implementiert",
+                        "10 einzigartige Karten zum Spielen",
+                        "Grundlegende Spielmechaniken implementiert",
+                        "Multiplayer-System für bis zu 5 Spieler"
+                    ]
+                },
+                {
+                    "type": "improvement",
+                    "title": "Verbesserungen",
+                    "items": [
+                        "Optimierte Spielbalance",
+                        "Verbesserte Benutzeroberfläche",
+                        "Schnellere Ladezeiten"
+                    ]
+                }
+            ]
+        },
+        {
+            "version": "0.9.0",
+            "date": "1. März 2024",
+            "changes": [
+                {
+                    "type": "improvement",
+                    "title": "Verbesserungen",
+                    "items": [
+                        "UI/UX Verbesserungen basierend auf Feedback",
+                        "Performance-Optimierungen",
+                        "Bugfixes"
+                    ]
+                },
+                {
+                    "type": "fix",
+                    "title": "Bugfixes",
+                    "items": [
+                        "Behebung von Verbindungsproblemen",
+                        "Korrektur der Spieler-Synchronisation",
+                        "Fehlerbehebung bei der Geist-Erkennung"
+                    ]
+                }
+            ]
+        },
+        {
+            "version": "0.8.0",
+            "date": "15. Februar 2024",
+            "changes": [
+                {
+                    "type": "feature",
+                    "title": "Neue Features",
+                    "items": [
+                        "Neue Geister-Typen hinzugefügt",
+                        "Verbesserte Karten-Mechaniken",
+                        "Neue Spielmodi"
+                    ]
+                }
+            ]
+        }
+    ]
+} 

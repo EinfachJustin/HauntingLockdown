@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haunting Lockdown - Das Geisterspiel</title>
+    <title>HauntingLockdown - Das neue Horror-Spiel</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <div class="container">
         <header>
             <nav>
@@ -20,7 +24,8 @@
                 <ul class="nav-links">
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">Über das Spiel</a></li>
-                    <li><a href="#news">News & Updates</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#changelog">Changelog</a></li>
                     <li><a href="#download">Download</a></li>
                 </ul>
                 <div class="burger">
@@ -67,26 +72,37 @@
                 </div>
             </section>
 
-            <section id="news" class="news">
-                <div class="section-header">
-                    <h2>News & Updates</h2>
-                </div>
-                <div class="news-container">
-                    <div class="news-item">
-                        <div class="news-date">15. Mai 2023</div>
-                        <h3>Version 1.0.0 veröffentlicht!</h3>
-                        <p>Die erste offizielle Version von Haunting Lockdown ist jetzt verfügbar! Lade es herunter und spiele mit deinen Freunden.</p>
-                        <div class="patch-notes">
-                            <h4>Patch Notes:</h4>
-                            <ul>
-                                <li>Initiale Veröffentlichung des Spiels</li>
-                                <li>5 verschiedene Geister-Typen implementiert</li>
-                                <li>10 einzigartige Karten zum Spielen</li>
-                                <li>Grundlegende Spielmechaniken implementiert</li>
-                            </ul>
-                        </div>
+            <section id="news" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>News</h2>
                     </div>
-                    <!-- Weitere News-Items können hier hinzugefügt werden -->
+                    <div class="search-container">
+                        <input type="text" id="news-search" placeholder="Suche in News..." class="search-input">
+                    </div>
+                    <div class="news-container">
+                        <!-- News items will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="changelog" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Changelog</h2>
+                    </div>
+                    <div class="search-container">
+                        <input type="text" id="changelog-search" placeholder="Suche im Changelog..." class="search-input">
+                    </div>
+                    <div class="filter-container">
+                        <button class="filter-btn active" data-filter="all">Alle</button>
+                        <button class="filter-btn" data-filter="feature">Neue Features</button>
+                        <button class="filter-btn" data-filter="improvement">Verbesserungen</button>
+                        <button class="filter-btn" data-filter="fix">Bugfixes</button>
+                    </div>
+                    <div class="changelog-container">
+                        <!-- Changelog items will be loaded here -->
+                    </div>
                 </div>
             </section>
 
@@ -138,7 +154,8 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">Über das Spiel</a></li>
-                        <li><a href="#news">News & Updates</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#changelog">Changelog</a></li>
                         <li><a href="#download">Download</a></li>
                     </ul>
                 </div>
@@ -149,11 +166,16 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2023 Haunting Lockdown. Alle Rechte vorbehalten.</p>
+                <p>© 2024 Haunting Lockdown. Alle Rechte vorbehalten.</p>
             </div>
         </footer>
     </div>
 
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/config.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
