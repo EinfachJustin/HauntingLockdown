@@ -1,24 +1,20 @@
-// Theme Management
-const themeToggle = document.getElementById('theme-toggle');
-const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-
-function setTheme(theme) {
-    document.body.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
+// Aktive Navigation markieren
+function updateActiveNav() {
+    const currentPath = window.location.hash || '#home';
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        }
+    });
 }
 
-function initTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        setTheme(savedTheme);
-    } else {
-        setTheme(prefersDarkScheme.matches ? 'dark' : 'light');
-    }
-}
-
-themeToggle.addEventListener('click', () => {
-    const currentTheme = document.body.getAttribute('data-theme');
-    setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+// Event Listener für Navigation
+document.addEventListener('DOMContentLoaded', () => {
+    updateActiveNav();
+    window.addEventListener('hashchange', updateActiveNav);
 });
 
 // Navigation
@@ -69,6 +65,20 @@ checkPassword.addEventListener('click', () => {
     } else {
         passwordError.style.display = 'block';
         downloadLink.style.display = 'none';
+    }
+});
+
+// Hero Button Funktionalität
+document.addEventListener('DOMContentLoaded', function() {
+    const heroButton = document.querySelector('.hero .btn');
+    if (heroButton) {
+        heroButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            const downloadSection = document.querySelector('.download');
+            if (downloadSection) {
+                downloadSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
     }
 });
 
@@ -251,9 +261,6 @@ window.addEventListener('resize', () => {
         burger.classList.remove('toggle');
     }
 });
-
-// Initialisiere Theme
-initTheme();
 
 // "Zurück nach oben" Button
 const backToTopButton = document.getElementById('back-to-top');
